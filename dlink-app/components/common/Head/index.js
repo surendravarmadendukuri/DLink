@@ -8,7 +8,6 @@ export default function Header({ title }) {
             <Head>
                 <title>{title}</title>
                 <meta name="description" content="DLink" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
         </div>
     )
