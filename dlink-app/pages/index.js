@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 
 import Footer from '../components/common/Footer'
 import Header from '../components/common/Head'
@@ -9,11 +9,12 @@ import { WALLET_INITIAL_STATE, walletReducer } from '../utility/reducers/wallet'
 export default function Home() {
 
   const [walletState, walletDispatch] = useReducer(walletReducer, WALLET_INITIAL_STATE);
+  const[title, setTitle]=useState("D-Link")
 
 
   return (
     <div>
-      <Header title={"D-Link"} />
+      <Header title={title} />
 
       {
         walletState.isWalletConnected ?
